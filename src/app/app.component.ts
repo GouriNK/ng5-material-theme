@@ -10,4 +10,11 @@ export class AppComponent {
   color = 'accent';
   checked = false;
   disabled = false;
+
+  darkTheme = false;
+
+  toggleTheme() {
+    console.log('here');
+    this.darkTheme = !this.darkTheme;
+  }
 }

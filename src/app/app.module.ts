@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { MatButtonModule, MatToolbarModule, MatIconModule, MatCardModule, MatSlideToggleModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
+import 'hammerjs';
 
 
 @NgModule({

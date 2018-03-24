@@ -1,36 +1,35 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span>Material App</span>
-    <span class="example-spacer"></span>
-    <!-- <mat-icon class="example-icon">favorite</mat-icon>
-    <mat-icon class="example-icon">delete</mat-icon> -->
-    <p class="theme-type-label">Light Theme</p>
-    <mat-slide-toggle
-          class="example-margin"
-          [color]="color"
-          [checked]="checked"
-          [disabled]="disabled">
+<div [ngClass]="{'alternative': darkTheme}">
+
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>Material App</span>
+      <span class="example-spacer"></span>
+      <!-- <mat-icon class="example-icon">favorite</mat-icon>
+      <mat-icon class="example-icon">delete</mat-icon> -->
+      <p class="theme-type-label">Light Theme</p>
+      <mat-slide-toggle class="example-margin" color="primary" checked="false" disabled="false" (change)="toggleTheme()">
         Dark Theme
       </mat-slide-toggle>
-  </mat-toolbar-row>
-</mat-toolbar>
+    </mat-toolbar-row>
+  </mat-toolbar>
 
-<mat-card class="example-card">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>Shiba Inu</mat-card-title>
-    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-  <mat-card-content>
-    <p>
-      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-      bred for hunting.
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-raised-button color="accent">LIKE</button>
-    <button mat-raised-button color="accent">SHARE</button>
-  </mat-card-actions>
-</mat-card>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Colour Pencils</mat-card-title>
+      <mat-card-subtitle>Kids Favourite</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="http://myanmareiti.org/sites/default/files/sample-5_0.jpg" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>
+        A coloured pencil is an art medium constructed of a narrow, pigmented core encased in a wooden cylindrical case. Although
+        colored pencils had been used for “checking and marking” for decades prior, it was not until the early 20th century
+        that artist-quality colored pencils were produced.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="accent">LIKE</button>
+      <button mat-raised-button color="accent">SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
