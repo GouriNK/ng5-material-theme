@@ -30,7 +30,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 This project was deployed with the below commands :
 
-ng build --prod
-npm i -g angular-cli-ghpages
-ng build --prod --base-href https://gourink.github.io/ng5-material-theme/
-ngh
+- `ng build --prod`
+- `npm i -g angular-cli-ghpages`
+- `ng build --prod --base-href https://gourink.github.io/ng5-material-theme/`
+- `ngh`
