@@ -10,6 +10,7 @@ export class AppComponent {
   color = 'accent';
   checked = false;
   disabled = false;
+  buttonElevation = 12;
 
   darkTheme = false;
 

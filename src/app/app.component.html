@@ -1,35 +1,49 @@
-<div [ngClass]="{'alternative': darkTheme}">
+<div [ngClass]="{'alternative-theme': darkTheme}">
 
   <mat-toolbar color="primary">
     <mat-toolbar-row>
       <span>Material App</span>
-      <span class="example-spacer"></span>
+      <span class="spacer"></span>
       <!-- <mat-icon class="example-icon">favorite</mat-icon>
       <mat-icon class="example-icon">delete</mat-icon> -->
       <p class="theme-type-label">Light Theme</p>
-      <mat-slide-toggle class="example-margin" color="primary" checked="false" disabled="false" (change)="toggleTheme()">
+      <mat-slide-toggle class="margin" color="primary" checked="false" disabled="false" (change)="toggleTheme()">
         Dark Theme
       </mat-slide-toggle>
     </mat-toolbar-row>
   </mat-toolbar>
 
-  <mat-card class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Colour Pencils</mat-card-title>
-      <mat-card-subtitle>Kids Favourite</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="assets/images/coloured_pencils.jpg" alt="Photo of colour pencils">
-    <mat-card-content>
-      <p>
-        A coloured pencil is an art medium constructed of a narrow, pigmented core encased in a wooden cylindrical case. Although
-        colored pencils had been used for “checking and marking” for decades prior, it was not until the early 20th century
-        that artist-quality colored pencils were produced.
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-raised-button color="accent">LIKE</button>
-      <button mat-raised-button color="accent">SHARE</button>
-    </mat-card-actions>
-  </mat-card>
+  <div class="container">
+    <mat-card class="control-card">
+      <mat-card-header>
+        <mat-card-title>Design Controls</mat-card-title>
+        <mat-card-subtitle>Change these controls to see changes in the design</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Slide along the slider to change elevation of buttons : </p>
+          <mat-slider class="elevation-slider" thumbLabel min="0" max="24" step="1" [(ngModel)]="buttonElevation"></mat-slider>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="sample-card">
+      <mat-card-header>
+        <div mat-card-avatar class="header-image"></div>
+        <mat-card-title>Colour Pencils</mat-card-title>
+        <mat-card-subtitle>Kids Favourite</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="assets/images/coloured_pencils.jpg" alt="Photo of colour pencils">
+      <mat-card-content>
+        <p>
+          A coloured pencil is an art medium constructed of a narrow, pigmented core encased in a wooden cylindrical case. Although
+          colored pencils had been used for “checking and marking” for decades prior, it was not until the early 20th century
+          that artist-quality colored pencils were produced.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button ngClass="{{'mat-elevation-z'+buttonElevation}}" mat-raised-button color="accent">LIKE</button>
+        <button ngClass="{{'mat-elevation-z'+buttonElevation}}" mat-raised-button color="accent">SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
 </div>

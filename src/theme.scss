@@ -11,12 +11,17 @@ $custom-theme: mat-light-theme($custom-primary, $custom-accent, $custom-warn);
 
 // ALTERNATIVE THEME
 
-$alt-primary: mat-palette($mat-grey, 200);
+$alt-primary: mat-palette($mat-grey);
 $alt-accent:  mat-palette($mat-yellow);
 
 $alt-theme: mat-dark-theme($alt-primary, $alt-accent);
 
-.alternative {
+.alternative-theme {
+    @include angular-material-theme($alt-theme);
+    // @include mat-button-theme($alt-theme);
+}
+
+.default-purple-shade-change {
     @include angular-material-theme($alt-theme);
     // @include mat-button-theme($alt-theme);
 }
