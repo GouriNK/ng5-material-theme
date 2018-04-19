@@ -1,22 +1,67 @@
 @import '~@angular/material/theming';
 @include mat-core();
 
-$custom-primary: mat-palette($mat-deep-purple, 600);
+
+// ORIGINAL THEME
+$custom-primary: mat-palette($mat-deep-purple);
 $custom-accent:  mat-palette($mat-pink);
-$custom-warn:    mat-palette($mat-red);
-
-$custom-theme: mat-light-theme($custom-primary, $custom-accent, $custom-warn);
-@include angular-material-theme($custom-theme);
+$custom-theme: mat-light-theme($custom-primary, $custom-accent);
 
 
-// ALTERNATIVE THEME
-
-$alt-primary: mat-palette($mat-grey, 200);
+// ALTERNATIVE DARK THEME
+$alt-primary: mat-palette($mat-grey);
 $alt-accent:  mat-palette($mat-yellow);
-
 $alt-theme: mat-dark-theme($alt-primary, $alt-accent);
 
-.alternative {
+.alternative-theme {
     @include angular-material-theme($alt-theme);
-    // @include mat-button-theme($alt-theme);
+}
+
+// DEFAULT SHADE CHANGES
+$custom-primary-100: mat-palette($mat-deep-purple, 100);
+$custom-theme-100 : mat-light-theme($custom-primary-100, $custom-accent);
+$custom-primary-300: mat-palette($mat-deep-purple, 300);
+$custom-theme-300 : mat-light-theme($custom-primary-300, $custom-accent);
+$custom-primary-600: mat-palette($mat-deep-purple, 600);
+$custom-theme-600 : mat-light-theme($custom-primary-600, $custom-accent);
+$custom-primary-900: mat-palette($mat-deep-purple, 900);
+$custom-theme-900 : mat-light-theme($custom-primary-900, $custom-accent);
+
+.theme-100 {
+    @include angular-material-theme($custom-theme-100);
+}
+.theme-300 {
+    @include angular-material-theme($custom-theme-300);
+}
+
+.theme-600 {
+    @include angular-material-theme($custom-theme-600);
+}
+
+.theme-900 {
+    @include angular-material-theme($custom-theme-900);
+}
+
+.theme-500 {
+    @include angular-material-theme($custom-theme);
+}
+
+
+// SAME PALETTE
+$custom-accent-A200:  mat-palette($mat-deep-purple, A200);
+$custom-same-palette-theme : mat-light-theme($custom-primary-100, $custom-accent-A200);
+.same-palette {
+    @include angular-material-theme($custom-same-palette-theme);
+}
+
+// WARN PALETTE
+$custom-warn:  mat-palette($mat-brown);
+$custom-warn-theme : mat-light-theme($custom-primary, $custom-accent, $custom-warn);
+.custom-warn-colour {
+    @include angular-material-theme($custom-warn-theme);
+}
+
+// ONLY BUTTON THEME CHANGE
+.btn-theme-900 {
+    @include mat-button-theme($custom-theme-900);
 }

@@ -1,5 +1,5 @@
-.example-header-image {
-  background-image: url('http://myanmareiti.org/sites/default/files/sample-5_0.jpg');
+.header-image {
+  background-image: url('assets/images/coloured_pencils.jpg');
   background-size: cover;
 }
 
@@ -7,11 +7,17 @@
   padding: 0 14px;
 }
 
-.example-spacer {
+.spacer {
   flex: 1 1 auto;
 }
 
-.example-card {
+.control-card{
+  margin:10px auto;
+  width: 600px;
+  height: 500px;
+}
+
+.sample-card {
   margin:10px auto;
   width: 300px;
   height: 500px;
@@ -20,4 +26,24 @@
 .theme-type-label {
   font: 400 14px/20px Roboto,"Helvetica Neue",sans-serif;
   margin-right: 10px;
+}
+
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.elevation-slider {
+  width: 100%;
+}
+
+.example-radio-group {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.example-radio-button {
+  margin: 5px;
 }
