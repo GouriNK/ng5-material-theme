@@ -18,35 +18,51 @@ export class AppComponent {
     '900',
   ];
 
+  fonts = [
+    'Cute Font',
+    'Gugi',
+    'Open Sans Condensed',
+    'Raleway',
+    'Gaegu',
+    'Roboto'
+  ];
+
   darkTheme = false;
   customWarn = false;
   customAccent = false;
   customBtn = false;
   selectedShade: string;
+  selectedFont: string;
   currentTheme = 'theme-500';
 
   toggleTheme() {
-    console.log('here');
     this.darkTheme = !this.darkTheme;
   }
 
   changeShade() {
-    console.log('changeShade : ', this.selectedShade);
+    this.darkTheme = false;
     this.currentTheme = `theme-${this.selectedShade}`;
   }
 
   changeWarn() {
-    console.log('changeWarn : ', this.customWarn);
+    this.darkTheme = false;
     this.currentTheme = this.customWarn === true ? `custom-warn-colour` : `theme-500`;
   }
 
   changeAccent() {
-    console.log('changeAccent : ', this.customAccent);
+    this.darkTheme = false;
     this.currentTheme = this.customAccent === true ? `same-palette` : `theme-500`;
   }
 
   changeOnlyButton() {
-    console.log('changeOnlyButton : ', this.customBtn);
+    this.darkTheme = false;
     this.currentTheme = this.customBtn === true ? `btn-theme-900` : `theme-500`;
+  }
+
+  changeFont(index) {
+    this.darkTheme = false;
+    console.log('change font', index);
+    this.currentTheme = `font-${index}`;
+    //this.currentTheme = this.customFont === true ? `custom-font` : `theme-500`;
   }
 }

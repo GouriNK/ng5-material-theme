@@ -11,7 +11,8 @@ import {
   MatSlideToggleModule,
   MatSliderModule,
   MatCheckboxModule,
-  MatRadioModule
+  MatRadioModule,
+  MatTabsModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -29,6 +30,7 @@ import 'hammerjs';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
+    MatTabsModule,
     MatCheckboxModule,
     MatSlideToggleModule,
     MatCardModule,

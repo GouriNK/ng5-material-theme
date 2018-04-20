@@ -13,14 +13,14 @@
 
 .control-card{
   margin:10px auto;
-  width: 600px;
-  height: 500px;
+  width: 650px;
+  height: auto;
 }
 
 .sample-card {
   margin:10px auto;
   width: 300px;
-  height: 500px;
+  height: auto;
 }
 
 .theme-type-label {
@@ -30,7 +30,7 @@
 
 .container {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: flex-start;
   align-items: center;
 }
@@ -50,4 +50,8 @@
 
 .control-card-content {
   margin-left: 6px;
+}
+
+.card-subtitle {
+  margin-top: 10px;
 }
