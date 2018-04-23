@@ -55,7 +55,7 @@ $custom-same-palette-theme : mat-light-theme($custom-primary-100, $custom-accent
 }
 
 // WARN PALETTE
-$custom-warn:  mat-palette($mat-brown);
+$custom-warn:  mat-palette($mat-amber);
 $custom-warn-theme : mat-light-theme($custom-primary, $custom-accent, $custom-warn);
 .custom-warn-colour {
     @include angular-material-theme($custom-warn-theme);
@@ -64,4 +64,49 @@ $custom-warn-theme : mat-light-theme($custom-primary, $custom-accent, $custom-wa
 // ONLY BUTTON THEME CHANGE
 .btn-theme-900 {
     @include mat-button-theme($custom-theme-900);
+}
+
+
+// CHANGE FONT
+$custom-typography-0: mat-typography-config(
+  $font-family: 'Cute Font , cursive'
+);
+$custom-typography-1: mat-typography-config(
+  $font-family: 'Gugi, cursive'
+);
+$custom-typography-2: mat-typography-config(
+  $font-family: 'Open Sans Condensed , sans-serif'
+);
+$custom-typography-3: mat-typography-config(
+  $font-family: 'Raleway , sans-serif'
+);
+$custom-typography-4: mat-typography-config(
+  $font-family: 'Gaegu, cursive'
+);
+$custom-typography-5: mat-typography-config(
+  $font-family: 'Roboto, "Helvetica Neue", sans-serif'
+);
+.font-0 { 
+    @include angular-material-theme($custom-theme);
+    @include angular-material-typography($custom-typography-0);
+}
+.font-1 { 
+    @include angular-material-theme($custom-theme);
+    @include angular-material-typography($custom-typography-1);
+}
+.font-2 { 
+    @include angular-material-theme($custom-theme);
+    @include angular-material-typography($custom-typography-2);
+}
+.font-3 { 
+    @include angular-material-theme($custom-theme);
+    @include angular-material-typography($custom-typography-3);
+}
+.font-4 { 
+    @include angular-material-theme($custom-theme);
+    @include angular-material-typography($custom-typography-4);
+}
+.font-5 { 
+    @include angular-material-theme($custom-theme);
+    @include angular-material-typography($custom-typography-5);
 }
